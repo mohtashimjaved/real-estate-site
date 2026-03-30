@@ -21,16 +21,16 @@ mongoose.connection.on("error", (err) => {
 })
 
 
-const getUser = async (req, res) => {
-    try {
-        const users = await User.find();
-        res.send({ status: 200, message: "User data received successfully", user: users })
+// const getUser = async (req, res) => {
+//     try {
+//         const users = await User.find();
+//         res.send({ status: 200, message: "User data received successfully", user: users })
 
-    } catch (err) {
-        res.status(500).send({ error: err })
-    }
-}
-app.get("/" , getUser)
+//     } catch (err) {
+//         res.status(500).send({ error: err })
+//     }
+// }
+// app.get("/" , getUser)
 
 const createUser = async (req, res) => {
     try {
